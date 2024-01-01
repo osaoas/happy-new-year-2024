@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #1e1e1e;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 5rem;
+  color: #e0e0e0;
+  position: relative;
+  animation: final 0.75s 1 cubic-bezier(0.81, -1.63, 0.33, 2.1) forwards;
+  animation-delay: 2.5s;
+  text-shadow: 0 0 30px;
+}
+h1 span {
+  position: absolute;
+  color: #b71c1c;
+  animation: saindo 2s 1 ease-out forwards;
+  animation-delay: 1s;
+  bottom: 0;
+}
+h1:after {
+  content: "4";
+  position: relative;
+  animation: chegando 1.8s 1 ease-out forwards;
+  animation-delay: 1s;
+  bottom: -80px;
+  opacity: 0;
+  color: #ffca28;
+}
+
+@keyframes saindo {
+  to {
+    bottom: 100px;
+    opacity: 0;
+  }
+}
+@keyframes chegando {
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes final {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}/*# sourceMappingURL=style.css.map */
